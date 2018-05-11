@@ -10,7 +10,7 @@ $response=array();
          
             while($row = sqlsrv_fetch_array($stmt1, SQLSRV_FETCH_ASSOC))
 			
-			array_push($response,array("ID"=>$row['Prod_ID'],"name"=>$row['Prod_Name'],"duration"=>$row['Prod_Price']));
+			array_push($response,array("ID"=>$row['Prod_ID'],"name"=>$row['Prod_Name'],"price"=>$row['Prod_Price'],"duration"=>$row['Prod_Duration']));
   
           echo json_encode(array("server_response"=>$response));
             //echo $_SESSION['Role'];
